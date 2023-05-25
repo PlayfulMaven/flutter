@@ -1,0 +1,1 @@
+(function(_ds){var window=this;var hba=class extends _ds.kQ{};try{window.customElements.define("devsite-youtube",hba)}catch(a){console.warn("devsite.app.customElement.DevsiteYouTube",a)};})(_ds_www);
