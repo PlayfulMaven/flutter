@@ -94,7 +94,7 @@ class _SignUpFormState extends State<SignUpForm> {
         mainAxisSize: MainAxisSize.min,
         children: [
           AnimatedProgressIndicator(value: _formProgress), // NEW
-          Text('Sign up', style: Theme.of(context).textTheme.headlineMedium),
+          Text('Sign Up', style: Theme.of(context).textTheme.headlineMedium),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextFormField(
@@ -116,7 +116,10 @@ class _SignUpFormState extends State<SignUpForm> {
               decoration: const InputDecoration(hintText: 'Username'),
             ),
           ),
-          TextButton(
+          SizedBox(
+            height: 200,
+            width: 400,
+          child: TextButton(
             style: ButtonStyle(
               foregroundColor: MaterialStateProperty.resolveWith(
                   (Set<MaterialState> states) {
@@ -133,7 +136,8 @@ class _SignUpFormState extends State<SignUpForm> {
             ),
             onPressed: 
             _formProgress == 1 ? _showWelcomeScreen : null, // UPDATED
-            child: const Text('Sign up'),
+            child: const Text('Next', textScaleFactor: 8),
+          ),
           ),
         ],
       ),
